@@ -40,6 +40,7 @@ const projects = [
     page: "projects/kitchen-module.html",
     mediaType: "video",
     src: "assets/videos/0317(2).mp4",
+    poster: "assets/images/kitchen-poster.jpg",
     alt: "Interior kitchen workbench"
   },
   {
