@@ -38,8 +38,9 @@ const projects = [
     description: "A kitchen module made from offcuts, reclaimed timber, ceramic tiles, aluminium, and plywood elements.",
     tags: ["Prototype", "Reuse", "Craft"],
     page: "projects/kitchen-module.html",
-    mediaType: "image",
-    src: "assets/images/kitchen-thumbnail.gif",
+    mediaType: "video",
+    src: "assets/videos/0317(2).mp4",
+    poster: "assets/images/kitchen-poster.jpg",
     alt: "Interior kitchen workbench"
   },
   {
