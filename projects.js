@@ -73,7 +73,7 @@ const projects = [
     size: "normal",
     description: "Example card for an MP4 thumbnail. Replace the src with your own video file path.",
     tags: ["Video", "GIF", "Interactive"],
-    page: "projects/pine-and-oak-Architecture.html",
+    page: "projects/pine-and-oak-architecture.html",
     mediaType: "image",
     src: "assets/images/pine-oak-ex.jpg",
     alt: "Example video thumbnail"
