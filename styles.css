@@ -470,6 +470,18 @@ button {
   text-transform: uppercase;
 }
 
+.email-heading {
+  font-size: clamp(1rem, 2vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.email-heading a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
 .info-card p,
 .info-card li {
   color: var(--ink);
@@ -646,6 +658,16 @@ button {
   .meta-item:nth-child(2n) {
     border-right: 0;
   }
+}
+
+body main section.contact-grid article.info-card.wide-card p.email-link a.big-email {
+  display: block !important;
+  font-size: clamp(1rem, 1.8vw, 6.5rem) !important;
+  line-height: 3 !important;
+  letter-spacing: -0.08e, !important;
+  text-transform: uppercase !mportant;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 @media (max-width: 700px) {

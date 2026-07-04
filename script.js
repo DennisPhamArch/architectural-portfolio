@@ -37,7 +37,7 @@ function createMedia(project) {
 
   const label = document.createElement("span");
   label.className = "media-label";
-  label.textContent = project.mediaType === "video" ? "Motion" : project.src.endsWith(".gif") ? "GIF" : "Image";
+  label.textContent = project.category;
   wrapper.appendChild(label);
 
   return wrapper;
