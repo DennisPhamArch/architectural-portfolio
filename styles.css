@@ -184,7 +184,7 @@ button {
 .project-hero h1 {
   margin: 0;
   font-family: var(--sans);
-  font-size: clamp(3rem, 10vw, 89rem);
+  font-size: clamp(3rem, 6vw, 89rem);
   font-weight: 500;
   line-height: 0.78;
   letter-spacing: -0.085em;
