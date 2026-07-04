@@ -595,6 +595,17 @@ button {
   object-fit: cover;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  filter: contrast(0.95);
+  mix-blend-mode: multiply;
+}
+
+.image-pair.square img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  mix-blend-mode: normal;
+}
+
+.image-pair.gray img {
   filter: grayscale(1) contrast(0.95);
   mix-blend-mode: multiply;
 }
