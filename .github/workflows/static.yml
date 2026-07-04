@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static site to GitHub Pages
+name: Deploy portfolio to GitHub Pages
 
 on:
   push:
@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -28,13 +28,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare site folder
+        run: |
+          mkdir _site
+          cp index.html _site/
+          cp styles.css _site/
+          cp -r assets _site/
+          cp -r projects _site/ || true
+          touch _site/.nojekyll
+
       - name: Upload site files
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./
+          path: ./_site
 
       - name: Deploy to GitHub Pages
         id: deployment
