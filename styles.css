@@ -184,7 +184,7 @@ button {
 .project-hero h1 {
   margin: 0;
   font-family: var(--sans);
-  font-size: clamp(3rem, 13vw, 9rem);
+  font-size: clamp(3rem, 9vw, 9rem);
   font-weight: 500;
   line-height: 0.78;
   letter-spacing: -0.085em;
@@ -193,7 +193,7 @@ button {
 
 .page-intro h1,
 .project-hero h1 {
-  font-size: clamp(4rem, 10vw, 10.8rem);
+  font-size: clamp(4rem, 9vw, 10.8rem);
 }
 
 .hero-copy-cell p,
