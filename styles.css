@@ -85,7 +85,7 @@ button {
 .info-card li,
 .info-card p {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: clamp(0.8rem,0.9vw, 1rem);
   line-height: 1.35;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -176,6 +176,7 @@ button {
 .eyebrow,
 .micro-label {
   margin: 0;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
   color: var(--ink);
 }
 
@@ -201,7 +202,7 @@ button {
   margin: 0;
   max-width: 44em;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
   line-height: 1.58;
   text-transform: uppercase;
   letter-spacing: 0.035em;
@@ -371,7 +372,7 @@ button {
 .card-description {
   margin: 0 0 18px;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.45;
   text-transform: uppercase;
   letter-spacing: 0.035em;
@@ -388,7 +389,7 @@ button {
 .tag,
 .card-view {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -516,6 +517,7 @@ button {
 
 .meta-item span {
   display: block;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
   margin-bottom: 10px;
 }
 
@@ -592,11 +594,12 @@ button {
   display: block;
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: contain;
+  object-fit: cover;
   filter: contrast(0.95);
   mix-blend-mode: normal;
 }
 
+.image-wide > .image-tile,
 .image-wide img + img {
   border-top: 1px solid var(--line);
 }
@@ -613,7 +616,7 @@ button {
   display: block;
   width: 100%;
   aspect-ratio: 183/70;
-  object-fit: contain;
+  object-fit: cover;
   filter: contrast(0.95);
   mix-blend-mode: normal;
 }
@@ -631,6 +634,12 @@ button {
   object-fit: cover;
   filter: contrast(0.95);
   mix-blend-mode: normal;
+}
+
+.image-single.gray img {
+  filter: grayscale(1) contrast(0.95);
+  mix-blend-mode: multiply;
+  width: 35%;
 }
 
 .image-single.small {
@@ -656,7 +665,7 @@ button {
 
 .image-pair.square img {
   aspect-ratio: 1 / 1;
-  object-fit: contain;
+  object-fit: cover;
   mix-blend-mode: normal;
 }
 
@@ -665,32 +674,91 @@ button {
   mix-blend-mode: multiply;
 }
 
-.image-pair > .image-tile:nth-child(odd) {
-  border-right: 1px solid var(--line);
-}
-
-.image-pair > .image-tile:nth-child(n + 3) {
-  border-top: 1px solid var(--line);
-}
-
 .image-tile {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
 
-.image-tile img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-}
-
 .image-subtitle {
   position: absolute;
   top: 16px;
   left: 16px;
-  z-index: 2;
+  z-index: 10;
+
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.image-pair > img,
+.image-pair > .image-tile {
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.image-pair > img:nth-child(odd),
+.image-pair > .image-tile:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.image-pair > img:nth-child(n + 3),
+.image-pair > .image-tile:nth-child(n + 3) {
+  border-top: 1px solid var(--line);
+}
+
+.image-pair > .image-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: contrast(0.95);
+  mix-blend-mode: multiply;
+}
+
+.image-pair.square > .image-tile img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+
+.image-pair > .image-tile > .image-subtitle {
+  position: absolute !important;
+  top: 16px !important;
+  left: 16px !important;
+  z-index: 10;
+
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+
+  font-size: clamp(0.8rem, 0.9vw, 1rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.image-banner > .image-tile {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.image-banner > .image-tile > .image-subtitle {
+  position: absolute !important;
+  top: 16px !important;
+  left: 16px !important;
+  z-index: 10;
 
   padding: 6px 10px;
   border: 1px solid var(--line);
@@ -702,6 +770,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 0;

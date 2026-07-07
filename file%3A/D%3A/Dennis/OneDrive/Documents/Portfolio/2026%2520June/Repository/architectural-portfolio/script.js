@@ -77,6 +77,7 @@ function renderProjects(filter = "All") {
           <div class="tag-row">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
           </div>
         </div>
+        
       </div>
     `;
 
