@@ -601,12 +601,47 @@ button {
   border-top: 1px solid var(--line);
 }
 
+.image-banner {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.image-banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 183/70;
+  object-fit: contain;
+  filter: contrast(0.95);
+  mix-blend-mode: normal;
+}
+
+.image-single {
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.image-single img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  filter: contrast(0.95);
+  mix-blend-mode: normal;
+}
+
+.image-single.small {
+  width: 75%;
+}
+
 .image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  border: 1px solid var(--line);
   margin-top: 24px;
 }
 
@@ -614,6 +649,7 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  box-sizing: border-box;
   filter: contrast(0.95);
   mix-blend-mode: multiply;
 }
@@ -629,6 +665,43 @@ button {
   mix-blend-mode: multiply;
 }
 
+.image-pair > .image-tile:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.image-pair > .image-tile:nth-child(n + 3) {
+  border-top: 1px solid var(--line);
+}
+
+.image-tile {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.image-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.image-subtitle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 0;
