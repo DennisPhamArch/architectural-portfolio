@@ -580,6 +580,27 @@ button {
   color: var(--ink);
 }
 
+.image-wide {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.image-wide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  filter: contrast(0.95);
+  mix-blend-mode: normal;
+}
+
+.image-wide img + img {
+  border-top: 1px solid var(--line);
+}
+
 .image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -593,8 +614,6 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   filter: contrast(0.95);
   mix-blend-mode: multiply;
 }
