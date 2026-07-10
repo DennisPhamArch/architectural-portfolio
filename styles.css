@@ -96,6 +96,15 @@ button {
   justify-self: start;
 }
 
+p.citation-text {
+  font-size: clamp(0.45rem, 0.8vw, 0.9rem) !important;
+  line-height: 1.35;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
 .header-note {
   justify-self: end;
 }
@@ -599,9 +608,47 @@ button {
   mix-blend-mode: normal;
 }
 
-.image-wide > .image-tile,
-.image-wide img + img {
+.image-wide > .image-tile {
+  margin: 0;
+}
+
+.image-wide > :is(img, .image-tile):not(:first-child) {
   border-top: 1px solid var(--line);
+}
+
+.image-anotation {
+  margin-top: 24px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-anotation img {
+  display: block;
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  
+  filter: contrast(0.95);
+}
+
+.image-png {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.image-png img {
+  display: block;
+  width: 40%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  filter: contrast(0.95);
+  mix-blend-mode: normal;
 }
 
 .image-banner {
