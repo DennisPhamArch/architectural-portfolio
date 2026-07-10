@@ -96,6 +96,13 @@ button {
   justify-self: start;
 }
 
+.logo img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 p.citation-text {
   font-size: clamp(0.45rem, 0.8vw, 0.9rem) !important;
   line-height: 1.35;
@@ -606,6 +613,10 @@ p.citation-text {
   object-fit: cover;
   filter: contrast(0.95);
   mix-blend-mode: normal;
+}
+
+.image-wide.unframe {
+  border: 0px solid var(--line);
 }
 
 .image-wide > .image-tile {
