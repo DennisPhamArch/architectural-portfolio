@@ -101,7 +101,7 @@ p.citation-text {
   line-height: 1.35;
   font-style: italic;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: none !important;
   margin-top: 12px;
 }
 
