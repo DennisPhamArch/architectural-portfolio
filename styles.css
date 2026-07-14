@@ -645,6 +645,10 @@ p.citation-text {
   filter: contrast(0.95);
 }
 
+.image-anotation.frame img {
+  border: 1px solid var(--line);
+}
+
 .image-png {
   display: flex;
   gap: 16px;
