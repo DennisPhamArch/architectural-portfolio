@@ -615,6 +615,10 @@ p.citation-text {
   mix-blend-mode: normal;
 }
 
+.image-wide.ungap {
+  margin-top: 0px;
+}
+
 .image-wide.unframe {
   border: 0px solid var(--line);
 }
@@ -702,6 +706,10 @@ p.citation-text {
   mix-blend-mode: normal;
 }
 
+.image-single.ungap {
+  margin-top: 0px;
+}
+
 .image-single.gray img {
   filter: grayscale(1) contrast(0.95);
   mix-blend-mode: multiply;
@@ -733,6 +741,10 @@ p.citation-text {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   mix-blend-mode: normal;
+}
+
+.image-pair.square.ungap {
+  margin-top: 0px;
 }
 
 .image-pair.gray img {
